@@ -1,0 +1,19 @@
+﻿<Window x:Class="GUI_04_02.TrooperEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vms="clr-namespace:GUI_04_02.ViewModels"
+        xmlns:local="clr-namespace:GUI_04_02"
+        mc:Ignorable="d"
+        Title="TrooperEditorWindow" Height="200" Width="300">
+
+
+    <StackPanel x:Name="stack" VerticalAlignment="Stretch">
+        <Label Content="Power" Padding="10" Background="LightBlue"/>
+        <TextBox Text="{Binding Current.Power, UpdateSourceTrigger=Explicit}" Padding="10"/>
+        <Label Content="Speed" Padding="10" Background="LightBlue"/>
+        <TextBox  Text="{Binding Current.Speed, UpdateSourceTrigger=Explicit}" Padding="10"/>
+        <Button Content="Save" Click="Button_Click" Padding="10"/>
+    </StackPanel>
+</Window>
